@@ -1,5 +1,5 @@
 
-function ItemListContainer (props) {
+function ItemListContainer ({props}) {
     return(
         <div>
             <h1>{props.text}</h1>
