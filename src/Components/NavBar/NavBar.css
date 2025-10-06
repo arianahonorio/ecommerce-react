@@ -40,3 +40,7 @@
 .navbar Link:hover::before {
     width: 100%;
 }
+
+.logoNutri{
+    width: 120px;
+}

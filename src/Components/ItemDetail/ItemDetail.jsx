@@ -3,15 +3,23 @@ import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 import { useState } from "react";
 
+import { CarritoContext } from "../../context/CarritoContext"
+import { useContext } from "react"
+
+
 const ItemDetail = ({id, nombre, precio, img, stock}) => {
     //estado con la cantidad de productos agregados al carrito
     const [agregarCantidad, setAgregarCantidad] = useState (0)
 
+    const {agregarAlCarrito} = useContext (CarritoContext)
+
     //funcion que maneja la cantidad 
     const manejadorCantidad = (cantidad) => {
         setAgregarCantidad (cantidad);
-        console.log("Productos agregados: " + cantidad)
     }
+
+    const item= {id, nombre, precio}
+    agregarAlCarrito (item, cantidad)
 
     return(
         <div className="contenedorItem">

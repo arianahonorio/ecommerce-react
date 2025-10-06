@@ -5,8 +5,8 @@ import {Link} from "react-router-dom"
 function NavBar () {
     return (
         <header className="header">
-            <Link to="/" className="logo">
-                <h1>NutriMarket</h1>
+            <Link to="/">
+                <img className="logoNutri" scr={"../../..public/img/logo-nutri.png"} alt= "Logo NutriMarket" />
             </Link>
             <nav className="navbar">
                 <ul>
