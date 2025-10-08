@@ -20,7 +20,7 @@ const ItemListContainer = () => {
                     const data= doc.data()
                     return {id: doc.id, ... data}
                 })
-                setProductos
+                setProductos(nuevosProductos)
             })
             .catch(error => console.log(error))
             .finally (() =>{

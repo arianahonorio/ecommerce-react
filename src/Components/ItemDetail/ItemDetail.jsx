@@ -7,7 +7,7 @@ import { useContext } from "react"
 import { toast } from "react-toastify";
 
 
-const ItemDetail = ({id, nombre, precio, img, stock}) => {
+const ItemDetail = ({id, nombre, precio, img, stock, descripcion}) => {
     //estado con la cantidad de productos agregados al carrito
     const [agregarCantidad, setAgregarCantidad] = useState (0)
 
@@ -28,7 +28,7 @@ const ItemDetail = ({id, nombre, precio, img, stock}) => {
             <h3>Precio: {precio}</h3>
             <h3>ID: {id}</h3>
             <img src={img} alt={nombre} />
-            <p>Descripción...</p>
+            <p>{descripcion}</p>
             {
                 agregarCantidad > 0 ?(<Link to="/cart">Terminar Compra</Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={manejadorCantidad}/>)
             }

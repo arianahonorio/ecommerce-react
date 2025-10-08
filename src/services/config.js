@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCK037Mh5qZLqUmaUdU_5bL1u2bz4KHnpk",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
     authDomain: "nutrimarketshop.firebaseapp.com",
     projectId: "nutrimarketshop",
     storageBucket: "nutrimarketshop.firebasestorage.app",
